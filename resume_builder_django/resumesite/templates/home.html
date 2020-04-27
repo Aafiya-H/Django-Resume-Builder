@@ -23,9 +23,9 @@
 
             <div id="name">
 
-                <h1 class="quickFade delayTwo">Sakshi-Aafiya-Hasti Bloggs</h1>
+                <h1 class="quickFade delayTwo">{{ name }}</h1>
 
-                <h2 class="quickFade delayThree">JOB TITLE</h2>
+                <h2 class="quickFade delayThree">SOFTWARE DEVELOPER</h2>
 
             </div>
 
@@ -33,9 +33,9 @@
 
             <div id="contactDetails" class="quickFade delayFour">
                 <ul>
-                    <li>e: <a href="mailto:joe@bloggs.com" target="_blank">sah@bloggs.com</a></li>
+                    <li>e: {{email}}</li>
                     <!-- <li>w: <a href="http://www.bloggs.com">www.bloggs.com</a></li>
- -->                    <li>m: 01234567890</li>
+ -->                    <li>m: {{mobile}}</li>
                 </ul>
             </div>
             <div class="clear"></div>
@@ -52,7 +52,7 @@
 
 
                     <div class="sectionContent">
-                        <p>Address: 9 Wall sc, New Road , Ghatkopar
+                        <p>Address: {{address}}
                         </p>
                     </div>
 
@@ -79,22 +79,19 @@
 
                     <article>
 
-                        <h2>SENIOR WEB DEVELOPER</h2>
-
-                        <p class="subDetails">September 2013 - Present</p>
-
-                        <p> Structure several internal systems comprising order entry/management tools, conversion/revenue reporting and production workflow tracking as well as design custom REST APIs built in Pthon, Laravel and NodeJs</p>
+                        <h2>{{experience_1_title}}</h2>
+                        <p class="subDetails">{{experience_1_dur}}</p>
+                        <p> {{experience_1_desc}}</p>
                     </article>
 
 
 
                     <article>
 
-                        <h2>SENIOR PROGRAMMER </h2>
+                        <h2>{{experience_2_title}}</h2>
+                        <p class="subDetails">{{experience_2_dur}}</p>
+                        <p> {{experience_2_desc}}</p>                   
 
-                        <p class="subDetails">June 2010- August 2013</p>
-
-                        <p> Successfully generated back-end programming utilizing LAMP stack; Linux, PHP5 , CSS, Javascript/jQuery and MySQL frameworks</p>
 
                     </article>
 
@@ -123,17 +120,10 @@
 
                     <ul class="keySkills">
 
-                        <li>ReactjS</li>
-
-                        <li>Bash /Shell</li>
-
-                        <li>Mcrosoft Windows Server</li>
-
-                        <li>Laravel PHP</li>
-
-                        <li>Linux operating system</li>
-
-                        <li>MySQL/MaraiaDB</li>
+                        <li>{{skills_1}}</li>
+                        <li>{{skills_2}}</li>
+                        <li>{{skills_3}}</li>
+                        <li>{{skills_4}}</li>
 
                     </ul>
 
@@ -161,11 +151,21 @@
 
                     <article>
 
-                        <h2>College/University</h2>
+                        <h2>{{education_1}}</h2>
 
-                        <p class="subDetails">Qualification</p>
+                        <p class="subDetails">{{education_1_dur}}</p>
 
-                        <p>COMPUTER ENGINEERING from K . J .Somaiya College of ENGINEERING from YEAR 2010</p>
+                        <p>Score : {{education1_score}}</p>
+
+                    </article>
+
+                    <article>
+
+                        <h2>{{education_2}}</h2>
+
+                        <p class="subDetails">{{education_2_dur}}</p>
+
+                        <p>Score : {{education2_score}}</p>
 
                     </article>
 
