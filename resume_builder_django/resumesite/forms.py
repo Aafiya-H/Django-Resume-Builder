@@ -52,7 +52,7 @@ class ExpWidget(forms.MultiWidget):
 class ExpField(forms.MultiValueField):
 	widget=ExpWidget
 	def __init__(self,*args,**kwargs):
-		fields=(forms.CharField(),
+		fields=(forms.CharField(),#validators can be added
 			forms.CharField(),
 			forms.CharField(),
 			)
