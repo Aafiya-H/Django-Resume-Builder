@@ -15,6 +15,7 @@ def info(request):
 			mobile=form.cleaned_data['mobile']
 			address=form.cleaned_data['address']
 			experience=form.cleaned_data['experience']
+			education=form.cleaned_data['education']
 			#to add more go to : forms.py
 			# print(name,email)
 	return render(request,'info.html',{'form':form})

@@ -47,7 +47,7 @@ class ExpWidget(forms.MultiWidget):
 	def decompress(self,value):
 		if value:
 			return value.split(' ')
-		return(['','','','','','',''])
+		return(['','',''])
 
 class ExpField(forms.MultiValueField):
 	widget=ExpWidget
@@ -59,7 +59,33 @@ class ExpField(forms.MultiValueField):
 		super().__init__(fields,*args,**kwargs)
 
 	def compress(self,data_list):
-		return f'{data_list[0]} {data_list[1]} {data_list[2]} {data_list[3]} {data_list[4]} {data_list[5]} {data_list[6]}'
+		return f'{data_list[0]} {data_list[1]} {data_list[2]}'
+
+class EduWidget(forms.MultiWidget):
+	def __init__(self,attrs=None):
+		super().__init__([
+			forms.TextInput(),
+			forms.TextInput(),
+			forms.TextInput()#,
+		],attrs)
+
+	def decompress(self,value):
+		if value:
+			return value.split(' ')
+		return(['','',''])
+
+class EduField(forms.MultiValueField):
+	widget=EduWidget
+	def __init__(self,*args,**kwargs):
+		fields=(forms.CharField(),#validators can be added
+			forms.CharField(),
+			forms.CharField(),
+			)
+		super().__init__(fields,*args,**kwargs)
+
+	def compress(self,data_list):
+		return f'{data_list[0]} {data_list[1]} {data_list[2]}'
+
 
 class ContactForm(forms.Form):
 	name=forms.CharField()#required=False
@@ -68,6 +94,7 @@ class ContactForm(forms.Form):
 	address=forms.CharField()
 	skills=SkillsField()
 	experience=ExpField()
+	education=EduField()
 
 	def __init__(self,*args,**kwargs):
 		super().__init__(*args,**kwargs)
@@ -80,5 +107,6 @@ class ContactForm(forms.Form):
 			'mobile',
 			'address',
 			'experience',
+			'education',
 			Submit('submit','Submit',css_class="btn-success")
 			)
