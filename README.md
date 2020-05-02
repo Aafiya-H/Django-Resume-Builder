@@ -22,3 +22,8 @@ Steps to run Django resume builder:
 Run manage.py file inside resume_builder_django directory
 Then the aspirant needs to fill in the personal details . After submitting the form , his/her resume will be generated.
 
+
+
+<p align="center">
+  <img src ="C:\Users\asus\Pictures\D_NEW3" width = 500px>
+</p>
