@@ -11,9 +11,13 @@ The resume builder application made in Django helps to make impressive resumes e
 
 Requirements :
    Python 3
-   Additional libraries :
+   
+   
+Additional libraries :
    Django 
    Crispy forms
+   
+   
 Steps to run Django resume builder:
 Run manage.py file inside resume_builder_django directory
 Then the aspirant needs to fill in the personal details . After submitting the form , his/her resume will be generated.
