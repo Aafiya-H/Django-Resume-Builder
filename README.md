@@ -1,8 +1,3 @@
-# Team members:
-Aafiya Hussain(1811014)
-Hasti Shah(1811043)
-Sakshi Shelar(1811053)
-
 # Django-Resume-Builder
 Problem Statement : Resume Builder
 
