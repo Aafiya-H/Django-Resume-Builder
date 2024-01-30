@@ -1,6 +1,6 @@
 import os
-import django_heroku
-import config
+# import django_heroku
+# import config
 import dj_database_url
 
 
@@ -31,8 +31,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'resumesite',
     'crispy_forms',
+    "crispy_bootstrap4"
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS="bootstrap4"
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -120,4 +123,4 @@ STATICFILES_DIRS = [
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
